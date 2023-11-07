@@ -1,0 +1,45 @@
+.card {
+    flex-direction: column;
+    display: flex;
+    max-width: 300px;
+    width: 100%;
+    background-color: #FFF;
+    padding: 7px 12px;
+    gap: 5px;
+
+    border-radius: 10px;
+    border: 1px solid #F1F0F0;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.card_title {
+    color: #000;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: normal;
+
+    width: 100%;
+    text-align: center;
+}
+.card_link {
+    color: #000;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+    transition: all 150ms;
+}
+.card:hover .image {
+    rotate: 0deg;
+}
+.image {
+    rotate: 5deg;
+    transition: all 150ms;
+}
+.card_link:hover {
+    color: var(--primary-color);
+    scale: 1.05;
+}

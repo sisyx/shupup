@@ -1,0 +1,86 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    max-width: 350px;
+    padding: 25px 34px;
+    background-color: white;
+    transition:  all 500ms;
+    color: unset;
+    text-decoration: unset;
+}
+.card * {
+    pointer-events: none;
+}
+.card.blur {
+    scale: 0.95;
+    filter: blur(2px);
+}
+.inActive {
+    opacity: 0.5;
+    /* pointer-events: none; */
+    cursor: not-allowed;
+    pointer-events: none;
+}
+.inActive img {
+    filter: blur(5px);
+}
+.decription {
+    text-align: right;
+}
+.details {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+}
+.stars {
+    display: flex;
+    align-items: center;
+}
+.detail_text {
+    color: var(--primary-color);
+}
+
+.off {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.price {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.price_dead {
+    position: relative;
+    width: fit-content;
+}
+.red_line {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-5deg);
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-color);
+    z-index: 2;
+}
+.activeProduct .red_line {
+    animation: fade-apear 1s infinite;
+}
+@keyframes fade-apear {
+    25% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 0;
+    }
+}
+
+.percent {
+    color: var(--primary-color);
+}

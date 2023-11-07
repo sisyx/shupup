@@ -1,0 +1,300 @@
+.cartPage {
+    direction: rtl;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.cart {
+    display: flex;
+    align-items: top;
+    justify-content: center;
+    gap: 30px;
+}
+
+
+/* product section */
+
+.productSec {
+}
+
+.title_product {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.product {
+    font-size: 18px;
+    font-weight: 600;
+    padding-right: 100px;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: 600;
+    padding-right: 65px;
+}   
+
+.number {
+    font-size: 18px;
+    font-weight: 600;
+    padding-left: 10px;
+}
+
+.total {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.line_2 {
+    width: 100%;
+    height: 2px;
+    background: #C8C5C5;
+}
+
+.product_item {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.product_p {
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 8px;
+}
+
+.description {
+    color: #939393;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.price_p {
+    color: #827F7F;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.counter_p {
+    height: 15px;
+    padding: 10px 9px 9px 9px;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 3px;
+    border-radius: 10px;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text_counter {
+    color: #C10000;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.total_p {
+    color: #F00;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.down_product{
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.button_copen{
+    padding-left: 230px;
+}
+
+/* input */
+
+.inputbox_copen{
+padding-left: 10px;
+}
+
+.input {
+    max-width: 150px;
+    height: 12px;
+    padding: 12px;
+    border-radius: 12px;
+    border: 2px solid lightgrey;
+    outline: none;
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+    box-shadow: 0px 0px 20px -18px;
+}
+
+.input:hover {
+    border: 2.5px solid lightgrey;
+    box-shadow: 0px 0px 20px -17px;
+}
+
+.input:active {
+    transform: scale(0.95);
+}
+
+.input:focus {
+    border: 2px solid #81B0F8;
+}
+
+
+/* button copon*/
+.button_copen button {
+    display: inline-flex;
+    padding: 12px 14px 12px 14px;
+    justify-content: center;
+    align-items: center;
+    background: #81B0F8;
+    border: none;
+    color: white;
+    border-radius: 5px;
+}
+
+.button_copen button:hover {
+    background-color: #448fff;
+}
+
+
+
+/* button update */
+
+.button_update button {
+    display: inline-flex;
+    padding: 10px 20px 10px 20px;
+    justify-content: center;
+    align-items: center;
+    background: #D9D9D9;
+    border: none;
+    color: black;
+    border-radius: 5px;
+}
+
+.button_update button:hover {
+    background-color: #81B0F8;
+    color: white;
+}
+
+
+
+/* pay section */
+
+.paySec {
+    width: 210px;
+    height: 260px;
+    border-radius: 10px;
+    border: 1px solid #D9D9D9;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+}
+
+.sec_title_pay {
+    width: 100%;
+}
+
+.title_pay {
+    color: hsl(0, 0%, 0%);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: center;
+}
+
+.moneyPartial {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 65px;
+}
+
+.textp {
+    color: #827F7F;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.moneyp {
+    color: #827F7F;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.lin {
+    width: 195px;
+    height: 2px;
+    background: #C8C5C5;
+}
+
+.moneyGeneral {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 65px;
+}
+
+.textg {
+    color: #000;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.moneyg {
+    color: rgb(233, 14, 14);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.button button {
+    display: inline-flex;
+    padding: 12px 35px 13px 35px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background: var(--red, #CF3838);
+    color: white;
+    font-weight: 500;
+    border: none;
+    transition: all 120ms;
+}
+
+.button button:hover {
+    background: #81B0F8;
+}
+
+button:active {
+    transform: translateY(3px);
+}

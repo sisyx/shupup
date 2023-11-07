@@ -1,0 +1,42 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    border: 2px #B1AFAF solid;
+    padding: 20px;
+    border-radius: 30px;
+}
+.comment,
+.reply {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+    width: 100%;
+}
+
+.comment_text {
+    text-align: right;
+}
+.replies {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+.reply {
+    background-color: #d5d5d5;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.comment_sender {
+    color: var(--primary-color);
+}
+.reply_text {
+    background: #B1AFAF;
+    text-align: right;
+    padding: 5px;
+}

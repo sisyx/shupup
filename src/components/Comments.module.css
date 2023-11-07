@@ -1,0 +1,97 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 50px;
+    padding: 100px 50px;
+    width: 100vw;
+    max-width: 1440px;
+    border-top: 2px #B1AFAF solid;
+    border-bottom: 2px #B1AFAF solid;
+    border-radius: 20px;
+}
+@media (max-width: 375px) {
+    .container {
+        padding: 50px 10px;
+    }
+}
+.title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    position: relative;
+    /* width: 100%; */
+    text-align: right;
+}
+.title::before {
+    content: '';
+    display: block;
+    height: 2px;
+    width: calc(100% + 20px);
+    background-color: var(--primary-color);
+    position: absolute;
+    bottom: -5px;
+    right: 0;
+}
+
+.comments {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+
+
+/* form */
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+}
+.inputs {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.inputs_main {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    min-width: 200px;
+    /* width: 100%; */
+    flex: 1;
+}
+.inputs_main .input {
+    width: 100% !important;
+    max-width: unset !important;
+}
+.text_place {
+    flex: 1;
+    min-width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.text_place textarea {
+    width: 90%;
+    height: 100%;
+    border-radius: 5px 5px 0 5px;
+    border: 2px lightgray solid;
+}
+.text_place textarea:focus {
+ border-color: var(--primary-color);
+
+outline: none;}
+.send_comment_btn {
+    color: white;
+    border-radius: 15px;
+    border: 1px solid #B1AFAF;
+    background: var(--primary-color);
+    padding-block: 5px;
+}
+.send_comment_btn:hover {
+    background: white;
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
