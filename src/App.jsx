@@ -16,6 +16,7 @@ import Payment from './pages/Payment';
 import styles from './App.module.css';
 import Cart from './pages/Cart';
 
+const HOMEPAGE = "/shupup"
 
 // reducers 
 
@@ -51,6 +52,7 @@ function productsReducer(state, action) {
     default: return state
   }
 }
+
 
 function App() {
   const [products, productsDispatch] = useReducer(productsReducer, useContext(ProductsContext))
@@ -101,15 +103,15 @@ function App() {
       <CardContext.Provider value={{cart, cartDispatch}}>
         <LoginContext.Provider value={{login, loginDispatch}}>
           <Routes>
-            <Route path='/' element={<HomeLayout />} />
-            <Route path='/forgot-pass' element={<ForgotPass />} />
-            <Route path='/login' element={<Login />} />
-            <Route path='/sign-up' element={<Signup />} />
-            <Route path='/main' element={<MainPage />} />
-            <Route path='/product' element={<Product />} />
-            <Route path='/cart' element={<Cart />} />
-            <Route path='/payment' element={<Payment />} />
-            <Route path='/offs' element={<OffProducts />} />
+            <Route path={`${HOMEPAGE}/`} element={<HomeLayout />} />
+            <Route path={`${HOMEPAGE}/forgot-pass`} element={<ForgotPass />} />
+            <Route path={`${HOMEPAGE}/login`} element={<Login />} />
+            <Route path={`${HOMEPAGE}/sign-up`} element={<Signup />} />
+            <Route path={`${HOMEPAGE}/main`} element={<MainPage />} />
+            <Route path={`${HOMEPAGE}/product`} element={<Product />} />
+            <Route path={`${HOMEPAGE}/cart`} element={<Cart />} />
+            <Route path={`${HOMEPAGE}/payment`} element={<Payment />} />
+            <Route path={`${HOMEPAGE}/offs`} element={<OffProducts />} />
             <Route path='*' element={<h1>ERROR 404: Page Not Found</h1>} />
           </Routes>
         </LoginContext.Provider>
