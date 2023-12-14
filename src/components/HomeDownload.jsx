@@ -1,5 +1,6 @@
 import styles from './HomeDownload.module.css';
 import Img from './Img'
+import { HOMEPAGE } from '../App';
 
 function HomeDownload() {
     return (

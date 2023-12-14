@@ -1,4 +1,5 @@
 import styles from './Footer.module.css'
+import { HOMEPAGE } from '../App'
 function Footer() {
     return (
         <>

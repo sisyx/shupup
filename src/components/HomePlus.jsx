@@ -1,4 +1,5 @@
 import styles from './HomePlus.module.css';
+import { HOMEPAGE } from '../App';
 function HomePlus() {
     return (
         <div className={styles.container}>
