@@ -9,7 +9,7 @@ import { HOMEPAGE } from '../App'
 
 function Login() {
 
-    const navigat = useNavigate()
+    const navigate = useNavigate()
     const {loginDispatch} = useContext(LoginContext);
 
     function handleLogin() {
@@ -35,7 +35,7 @@ function Login() {
             }
         }
         handleLogin();
-        navigat('/');
+        navigate(HOMEPAGE);
     }
 
     return (

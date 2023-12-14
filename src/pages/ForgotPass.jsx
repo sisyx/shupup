@@ -4,6 +4,7 @@ import ForgotPassInput from '../components/MyInput';
 import styles from './ForgotPass.module.css';
 import { LoginContext } from '../Contexts/Context';
 import { useNavigate } from 'react-router-dom';
+import { HOMEPAGE } from '../App';
 
 function ForgotPass() {
 
@@ -52,7 +53,7 @@ function ForgotPass() {
         }
 
         if (handleLogin()) {
-            navigate('/');
+            navigate(`${HOMEPAGE}`);
         } else {
             console.log('what?');
         }

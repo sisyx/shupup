@@ -36,7 +36,7 @@ function Product() {
     }
 
     function handleAddTOCart(event) {
-        if (isAddedToCart)  navigate('/cart')
+        if (isAddedToCart)  navigate(`${HOMEPAGE}/cart`)
         else {
             setIsAddedToCart(1)
             cartDispatch({type: 'addToCart', payload: {price, image, count, name }})

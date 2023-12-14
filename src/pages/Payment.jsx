@@ -6,6 +6,7 @@ import Img from '../components/Img';
 import { CardContext } from '../Contexts/Context';
 import { useNavigate } from 'react-router-dom';
 import BigButton from '../components/BigButton'
+import { HOMEPAGE } from '../App';
 
 function Payment() {
 
@@ -17,7 +18,7 @@ function Payment() {
 
     function pay() {
         cartDispatch({type: 'pay'});
-        navigate('/');
+        navigate(HOMEPAGE);
     }
 
     function handleClickPay(event) {

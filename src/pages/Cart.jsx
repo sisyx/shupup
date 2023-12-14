@@ -2,6 +2,7 @@ import { useContext } from 'react'
 import { CardContext } from '../Contexts/Context'
 import styles from './Cart.module.css'
 import { useNavigate } from 'react-router-dom';
+import { HOMEPAGE } from '../App';
 export default function Cart() {
 
     const navigate = useNavigate();
@@ -10,7 +11,7 @@ export default function Cart() {
     const totalPrice = cart.reduce((acc, cur) => acc + (cur.price * cur.count),0);
 
     function handleGotopayClick(event) {
-        navigate('/payment')
+        navigate(`${HOMEPAGE}/payment`)
     }
 
     return (

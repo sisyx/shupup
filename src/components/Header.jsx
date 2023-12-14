@@ -65,7 +65,7 @@ function Header() {
 
             <div className={styles.left}>
                 <div className={`${styles.logo} ${isSearching ? styles.hidden : ''}`}>
-                    <img src={`${HOMEPAGE}/public/images/Logo.png`} alt="LOGO" className={styles.logo} />
+                    <img src={`${HOMEPAGE}/images/Logo.png`} alt="LOGO" className={styles.logo} />
                 </div>
                 <label className={`${styles.search} ${isSearching ? styles.active_search : ''}`}>
                     <svg className={styles.search_icon} xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="currentcolor" onClick={toggleIsSearching}>
@@ -78,7 +78,7 @@ function Header() {
                             {
                                 searchFoundsList.length
                                 ? searchFoundsList.map(product => 
-                                    <Link className={styles.search_result} onClick={() => navigate(`${HOMEPAGE}/product?id=${product.id}`)} to={`/product?id=${product.id}`} key={`search-pro-${product.id}`}>
+                                    <Link className={styles.search_result} onClick={() => navigate(`${HOMEPAGE}/product?id=${product.id}`)} key={`search-pro-${product.id}`}>
                                         <span>{product.name} </span>
                                         <span>{product.price.toLocaleString()} تومان   </span>    
                                     </Link>
@@ -190,7 +190,7 @@ function Header() {
                       </div>
                     :
                     <div className={styles.sign_up_in}>
-                        <button className={styles.sign_up_in_btn} onClick={() => navigate('/login')}>ورود یا ثبت نام</button>
+                        <button className={styles.sign_up_in_btn} onClick={() => navigate(`${HOMEPAGE}/login`)}>ورود یا ثبت نام</button>
                     </div>
                 }
             </div>

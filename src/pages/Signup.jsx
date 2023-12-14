@@ -38,7 +38,7 @@ function Signup() {
         }
 
         if (handleLogin()) {
-            navigate('/');
+            navigate(HOMEPAGE);
         } else {
             console.log('what?');
         }
