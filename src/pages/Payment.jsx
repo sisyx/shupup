@@ -10,7 +10,7 @@ import { HOMEPAGE } from '../App';
 
 function Payment() {
 
-    const [remainedTime, setRemainedTime] = useState(20);
+    const [remainedTime, setRemainedTime] = useState(120);
     const {cart, cartDispatch} = useContext(CardContext);
 
     const totalPrice = cart.reduce((acc, cur) => acc + (cur.price * cur.count),0);
