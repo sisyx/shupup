@@ -47,7 +47,7 @@ function Login() {
                 <Captcha />
                 <div className={styles.smalls}>
                     <Link className={styles.small_left} to={`${HOMEPAGE}/forgot-pass`}>رمز عبور خود را فراموش کرده اید؟</Link>
-                    <Link className={styles.small_right} to={`${HOMEPAGE}sign-up`}>
+                    <Link className={styles.small_right} to={`${HOMEPAGE}/sign-up`}>
                         <span>حساب جدید بسازید</span>
                         {/* <input type="checkbox" /> */}
                     </Link>

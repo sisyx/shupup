@@ -73,12 +73,12 @@ function Header() {
                     </svg>
                     <input className={`${styles.search_input} id="searchinput" ${isSearching ? '' : styles.hidden}`} placeholder='Search' onBlur={() => setTimeout(toggleIsSearching, 200)} onChange={handleSearch} ref={searchInput} />
                     {
-                        isSearching &&
+                        !!isSearching &&
                         <div className={`${styles.search_results} ${isSearching ? styles.active : ''}`}>
                             {
                                 searchFoundsList.length
                                 ? searchFoundsList.map(product => 
-                                    <Link className={styles.search_result} onClick={() => navigate(`${HOMEPAGE}/product?id=${product.id}`)} key={`search-pro-${product.id}`}>
+                                    <Link className={styles.search_result} to={`${HOMEPAGE}/product?id=${product.id}`} key={`search-pro-${product.id}`}>
                                         <span>{product.name} </span>
                                         <span>{product.price.toLocaleString()} تومان   </span>    
                                     </Link>
