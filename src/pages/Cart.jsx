@@ -39,11 +39,11 @@ export default function Cart() {
                             <div className={styles.product_p}>
         
                                 <div className={styles.icon}>
-                                    <img src="./img/icons8-cancel-60 1.svg" alt="" />
+                                    <img src={`${HOMEPAGE}/images/icons8-cancel-60 1.svg`} alt="" />
                                 </div>
         
                                 <div className={styles.img}>
-                                    <img src="./img/Frame 7.svg" alt="" />
+                                    <img src={`${HOMEPAGE}/Frame 7.svg`} alt="" />
                                 </div>
         
                                 <div className={styles.description}>{product.name ? product.name : 'بدون نام'}</div>
@@ -56,11 +56,11 @@ export default function Cart() {
         
                             <div className={styles.counter_p}>
         
-                                <img src="./img/icons8-plus-52 1.svg" alt="" />
+                                <img src={`${HOMEPAGE}/images/icons8-plus-52 1.svg`} alt="" />
         
                                 <div className={styles.text_counter}>{product.count}</div>
         
-                                <img src="./img/icons8-delete-100 1.svg" alt="" />
+                                <img src={`${HOMEPAGE}/images/icons8-delete-100 1.svg`} alt="" />
         
                             </div>
         

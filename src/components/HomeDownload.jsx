@@ -33,7 +33,7 @@ function HomeDownload() {
             </div>
             <div className={styles.right}>
                 <span>دانلود اپلیکیشن وب شاب</span>
-                <img src="/images/Logo.png" alt="Logo" />
+                <img src={`${HOMEPAGE}/images/Logo.png`} alt="Logo" />
             </div>            
         </div>
     )

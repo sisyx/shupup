@@ -4,6 +4,7 @@ import { Link, useParams } from 'react-router-dom';
 import { useContext, useEffect } from 'react';
 import { ProductsContext } from '../Contexts/Context';
 import { useSearchParams } from 'react-router-dom';
+import { HOMEPAGE } from "../App";
 
 function OffProductCard({product, bg='white', cls=''}) {
 
@@ -31,14 +32,14 @@ function OffProductCard({product, bg='white', cls=''}) {
     }
 
     return (
-        <Link to={`/product?id=${id}`} className={`${styles.card} ${left == 0 ? styles.inActive : styles.activeProduct} ${cls}`} style={{background: bg}} onMouseOver={event => left !== 0 ? handleHover(event) : null} onMouseOut={handleHoverOut}>
+        <Link to={`${HOMEPAGE}/product?id=${id}`} className={`${styles.card} ${left == 0 ? styles.inActive : styles.activeProduct} ${cls}`} style={{background: bg}} onMouseOver={event => left !== 0 ? handleHover(event) : null} onMouseOut={handleHoverOut}>
             <Img name={image} alt="producr icon" />
             <div className={styles.description}>
                 {name}
             </div>
             <div className={styles.details}>
                 <div className={styles.stars}>
-                    <img src="/images/offProductStar.svg" alt="*" />
+                    <img src={`${HOMEPAGE}/images/offProductStar.svg`} alt="*" />
                     <span className={styles.rate}>{stars}</span>
                 </div>
                 {

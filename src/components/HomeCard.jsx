@@ -1,5 +1,6 @@
 import { useRef } from 'react';
 import styles from './HomeCard.module.css'
+import { HOMEPAGE } from '../App';
 function HomeCard({card}) {
     const image = useRef();
     const {text, imageSrc} = card;
@@ -20,7 +21,7 @@ function HomeCard({card}) {
     return (
         <div className={styles.card} onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
             <div className={styles.card_title}>{text}</div>
-            <img src={imageSrc} alt="card" className={styles.image} ref={image} style={{rotate: `${rotate}deg`}} />
+            <img src={`${HOMEPAGE}/${imageSrc}`} alt="card" className={styles.image} ref={image} style={{rotate: `${rotate}deg`}} />
             <div className={styles.card_link}>دیدن بیشتر</div>
         </div>
     )

@@ -5,6 +5,7 @@ import SpeciaProductSimilarsList from '../components/SpeciaProductSimilarsList';
 import Comments from '../components/Comments';
 import { useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import { CardContext, ProductsContext } from '../Contexts/Context';
+import { HOMEPAGE } from '../App';
 
 function Product() {
 
@@ -99,7 +100,7 @@ function Product() {
                     </div>
                 </div>
                 <div className={styles.product_images}>
-                    <img src={`/images/product-image-${selectedImage}.png`} alt="Product-image" className={`${styles.product_main_image} ${styles.animate_main_image}`} ref={productMainImage} />
+                    <img src={`${HOMEPAGE}/images/product-image-${selectedImage}.png`} alt="Product-image" className={`${styles.product_main_image} ${styles.animate_main_image}`} ref={productMainImage} />
                     <div className={styles.product_minor_images}>
                         {
                             [1,2,3,4].map(num => <Img name={`product-image-${num}.png`} cls={`${styles.product_minor_image} ${selectedImage === num ? styles.selected_image : ''}`} onClick={event => setSelectedImage(num)} key={`pim${num}x`} />)

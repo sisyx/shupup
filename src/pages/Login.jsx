@@ -5,6 +5,7 @@ import MyInput from '../components/MyInput'
 import styles from './Login.module.css'
 import { useContext } from 'react'
 import { LoginContext } from '../Contexts/Context'
+import { HOMEPAGE } from '../App'
 
 function Login() {
 
@@ -45,8 +46,8 @@ function Login() {
                 <MyInput icon='lock.svg' title='رمز عبور' placeholder='رمز عبور را وارد کنید' />
                 <Captcha />
                 <div className={styles.smalls}>
-                    <Link className={styles.small_left} to='/forgot-pass'>رمز عبور خود را فراموش کرده اید؟</Link>
-                    <Link className={styles.small_right} to='/sign-up'>
+                    <Link className={styles.small_left} to={`${HOMEPAGE}/forgot-pass`}>رمز عبور خود را فراموش کرده اید؟</Link>
+                    <Link className={styles.small_right} to={`${HOMEPAGE}sign-up`}>
                         <span>حساب جدید بسازید</span>
                         {/* <input type="checkbox" /> */}
                     </Link>
@@ -58,9 +59,9 @@ function Login() {
                         ...ثبت نام کنید...
                     </div>
                     <div className={styles.external_images}>
-                        <img src="/images/facebook.svg" alt="facebook" />
-                        <img src="/images/google.svg" alt="google" />
-                        <img src="/images/twitter.svg" alt="twitter" />
+                        <img src={`${HOMEPAGE}/images/facebook.svg`} alt="facebook" />
+                        <img src={`${HOMEPAGE}/images/google.svg`} alt="google" />
+                        <img src={`${HOMEPAGE}/images/twitter.svg`} alt="twitter" />
                     </div>
                 </div>
             </form>

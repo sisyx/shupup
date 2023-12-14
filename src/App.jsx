@@ -1,8 +1,4 @@
 import { useContext, useEffect, useReducer, useState } from 'react'
-import Input from './components/Input'
-import Header from './components/Header';
-import HomeCard from './components/HomeCard';
-import OffProductCard from './components/OffProductCard';
 import OffProducts from './pages/OffProducts';
 import HomeLayout from './layouts/HomeLayout';
 import ForgotPass from './pages/ForgotPass';
@@ -16,7 +12,7 @@ import Payment from './pages/Payment';
 import styles from './App.module.css';
 import Cart from './pages/Cart';
 
-const HOMEPAGE = "/shupup"
+export const HOMEPAGE = "/shupup"
 
 // reducers 
 

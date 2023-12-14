@@ -6,6 +6,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import Img from '../components/Img'
 import { useContext } from 'react'
 import { LoginContext } from '../Contexts/Context'
+import { HOMEPAGE } from '../App'
 
 function Signup() {
 
@@ -62,7 +63,7 @@ function Signup() {
                     </div>
                 </div>
                 <BigButton text='ثبت نام' fontSize='1.5rem' onClick={handleClick} />
-                <a className={styles.small} href='/login'>از قبل حساب دارید؟</a>
+                <Link className={styles.small} to={`${HOMEPAGE}/login`}>از قبل حساب دارید؟</Link>
             </div>
         </div>
     )

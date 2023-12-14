@@ -1,6 +1,6 @@
 import styles from './MyInput.module.css'
 import { useRef, useState, useEffect } from 'react';
-
+import { HOMEPAGE } from '../App';
 
 function MyInput({type='text',title='چیزی بنویسید', icon='', placeholder='مثل:او دیوانه است', cls='', active=false, fontSize='1rem', onchange=() => 1 } ) {
 
@@ -20,7 +20,7 @@ function MyInput({type='text',title='چیزی بنویسید', icon='', placehol
             }
             <div className={`${styles.input_n_icon} ${isActive ? styles.typing : ''}`}>
                 
-                {icon ? <img src={`/images/${icon}`} alt=">>" /> : null }
+                {icon ? <img src={`${HOMEPAGE}/images/${icon}`} alt=">>" /> : null }
                 <input type={type} placeholder={placeholder} className={styles.input} onFocus={() => setIsActive(true)} onBlur={() => setIsActive(false)} ref={input} onChange={ event => onchange(event)} />
             </div>
         </div>

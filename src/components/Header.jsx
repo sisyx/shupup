@@ -3,6 +3,8 @@ import styles from './Header.module.css';
 import Input from './Input';
 import { Link, useNavigate } from 'react-router-dom';
 import { LoginContext, ProductsContext } from '../Contexts/Context';
+import { HOMEPAGE } from '../App';
+
 
 function Header() {
     const [isSearching, setIsSearching] = useState(0);
@@ -13,7 +15,7 @@ function Header() {
     const [searchFoundsList, setSearchFoundsList] = useState([])
 
     function toggleIsSearching() {
-        setIsSearching(cur => cur === 1 ? 0 : 1);
+        setIsSearching(cur => cur === 1 ? 0 : 1);Header
     }
     // if  (isSearching) document.querySelector(`.${styles.search_input}`).focus()
 
@@ -63,7 +65,7 @@ function Header() {
 
             <div className={styles.left}>
                 <div className={`${styles.logo} ${isSearching ? styles.hidden : ''}`}>
-                    <img src="/public/images/Logo.png" alt="LOGO" className={styles.logo} />
+                    <img src={`${HOMEPAGE}/public/images/Logo.png`} alt="LOGO" className={styles.logo} />
                 </div>
                 <label className={`${styles.search} ${isSearching ? styles.active_search : ''}`}>
                     <svg className={styles.search_icon} xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="currentcolor" onClick={toggleIsSearching}>
@@ -76,7 +78,7 @@ function Header() {
                             {
                                 searchFoundsList.length
                                 ? searchFoundsList.map(product => 
-                                    <Link className={styles.search_result} onClick={() => navigate(`/product?id=${product.id}`)} to={`/product?id=${product.id}`} key={`search-pro-${product.id}`}>
+                                    <Link className={styles.search_result} onClick={() => navigate(`${HOMEPAGE}/product?id=${product.id}`)} to={`/product?id=${product.id}`} key={`search-pro-${product.id}`}>
                                         <span>{product.name} </span>
                                         <span>{product.price.toLocaleString()} تومان   </span>    
                                     </Link>
@@ -175,10 +177,10 @@ function Header() {
             </div>
             <div className={styles.right}>
                 <div className={styles.support}>
-                    <img src="/images/support.svg" alt="support" />
+                    <img src={`${HOMEPAGE}/images/support.svg`} alt="support" />
                 </div>
-                <Link className={styles.cart} to='/main'>
-                    <img src="/images/cart.svg" alt="" />
+                <Link className={styles.cart} to={`${HOMEPAGE}/main`}>
+                    <img src={`${HOMEPAGE}/images/cart.svg`} alt="" />
                 </Link>
                 <div className={styles.vertical_line}></div>
                 {

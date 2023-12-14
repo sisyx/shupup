@@ -6,7 +6,7 @@ function Footer() {
             <div className={styles.top_line}></div>
             <div className={styles.footer_main_content}>
                 <div className="footer_main_content__left">
-                    <img src="/images/Logo.png" />
+                    <img src={`${HOMEPAGE}/images/Logo.png`} />
                     <p className={styles.left_text}>Your natural candle made for your home and for your wellness.</p>
                 </div>
                 <div className={styles.footer_main_content__right}>
